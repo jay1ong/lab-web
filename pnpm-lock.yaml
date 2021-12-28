@@ -16,6 +16,7 @@ specifiers:
   axios: ^0.21.4
   esno: ^0.10.1
   inquirer: ^8.2.0
+  keycloak-js: ^16.1.0
   less: ^4.1.2
   less-loader: ^10.1.0
   pinia: ^2.0.0-rc.10
@@ -44,6 +45,7 @@ dependencies:
   '@vueuse/core': 6.9.2_vue@3.2.26
   ant-design-vue: mirrors.tencent.com/ant-design-vue/2.2.8_ae87cbba5ec93a01f3fe1197df446ca3
   axios: mirrors.tencent.com/axios/0.21.4
+  keycloak-js: 16.1.0
   pinia: 2.0.9_typescript@4.5.4+vue@3.2.26
   tdesign-vue-next: mirrors.tencent.com/tdesign-vue-next/0.6.0_vue@3.2.26
   typescript: mirrors.tencent.com/typescript/4.5.4
@@ -966,6 +968,13 @@ packages:
       promise: mirrors.tencent.com/promise/7.3.1
     dev: false
 
+  /keycloak-js/16.1.0:
+    resolution: {integrity: sha512-ydD0SJ+cLmtlor5MvyIOJygnGHueWwnAtXvqniv19k4TslcSpAEACTsnsvENdKa7/NTC4/erg6NctS4uF3nMdw==}
+    dependencies:
+      base64-js: mirrors.tencent.com/base64-js/1.3.1
+      js-sha256: mirrors.tencent.com/js-sha256/0.9.0
+    dev: false
+
   /mime-db/1.51.0:
     resolution: {integrity: sha512-5y8A56jg7XVQx2mbv1lu49NR4dokRnhZYTtL+KGfaa27uq4pSTXkwQkFJl4pkRMyNFz/EtYDSkiiEHx3F7UN6g==}
     engines: {node: '>= 0.6'}
@@ -1261,6 +1270,12 @@ packages:
     name: balanced-match
     version: 1.0.2
     dev: true
+
+  mirrors.tencent.com/base64-js/1.3.1:
+    resolution: {integrity: sha512-mLQ4i2QO1ytvGWFWmcngKO//JXAQueZvwEKtjgQFM4jIK0kU+ytMfplL8j+n5mspOfjHwoAg+9yhb7BwAHm36g==, registry: http://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/base64-js/-/base64-js-1.3.1.tgz}
+    name: base64-js
+    version: 1.3.1
+    dev: false
 
   mirrors.tencent.com/base64-js/1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==, registry: http://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/base64-js/-/base64-js-1.5.1.tgz}
@@ -2358,6 +2373,12 @@ packages:
     hasBin: true
     dev: false
 
+  mirrors.tencent.com/js-sha256/0.9.0:
+    resolution: {integrity: sha512-sga3MHh9sgQN2+pJ9VYZ+1LPwXOxuBJBA5nrR5/ofPfuiJBE2hnjsaN8se8JznOmGLN2p49Pe5U/ttafcs/apA==, registry: http://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/js-sha256/-/js-sha256-0.9.0.tgz}
+    name: js-sha256
+    version: 0.9.0
+    dev: false
+
   mirrors.tencent.com/js-stringify/1.0.2:
     resolution: {integrity: sha1-Fzb939lyTyijaCrcYjCufk6Weds=, registry: http://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/js-stringify/-/js-stringify-1.0.2.tgz}
     name: js-stringify
@@ -3171,7 +3192,7 @@ packages:
     dev: false
 
   mirrors.tencent.com/source-map/0.6.1:
-    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==, registry: http://mirrors.cloud.tencent.com/npm/, tarball: http://mirrors.tencent.com/npm/source-map/-/source-map-0.6.1.tgz}
+    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==, registry: http://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/source-map/-/source-map-0.6.1.tgz}
     name: source-map
     version: 0.6.1
     engines: {node: '>=0.10.0'}
