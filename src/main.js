@@ -6,9 +6,12 @@ import { setupStore } from "/@/store";
 // WindiCSS
 import 'virtual:windi.css';
 import Antd from 'ant-design-vue';
+import TDesign from 'tdesign-vue-next';
 import '@purge-icons/generated'
 
 import Keycloak from 'keycloak-js'
+// 引入组件库全局样式资源
+import 'tdesign-vue-next/es/style/index.css';
 
 if (import.meta.env.DEV) {
     import('ant-design-vue/dist/antd.less');
@@ -30,6 +33,8 @@ setupStore(app);
 app.use(router);
 
 app.use(Antd);
+
+app.use(TDesign);
 
 keycloak.init({ onLoad: initOptions.onLoad }).then((auth) => {
     if (!auth) {
@@ -55,4 +60,3 @@ keycloak.init({ onLoad: initOptions.onLoad }).then((auth) => {
 }).catch((error) => {
     console.error("🚀 ~ file: main.js ~ line 52 ~ keycloak.init ~ Authenticated Failed", error)
 });
-
