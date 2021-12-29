@@ -29,4 +29,8 @@ export const getMenuVisible = (route: RouteRecordRaw): boolean => {
   return route.meta !== undefined && !route.meta.hideMenu;
 };
 
-
+export const getRouterView = () => {
+  return {
+    template: "<router-view></router-view>",
+  };
+};

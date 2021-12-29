@@ -1,4 +1,5 @@
 import { RouteRecordRaw } from "vue-router";
+import { getRouterView } from "./helper/routeHelper";
 import Layout from "/@/views/sys/layout/index.vue";
 
 import HomePage1 from "../views/pages/Page1.vue";
@@ -34,7 +35,7 @@ export const routes: RouteRecordRaw[] = [
           title: "页面1",
           icon: "ant-design:idcard-outlined",
         },
-        component: HomePage1,
+        component: getRouterView(),
         children: [
           {
             path: "page2",
@@ -44,7 +45,7 @@ export const routes: RouteRecordRaw[] = [
               icon: "ant-design:hourglass-filled",
               // hideMenu: true,
             },
-            component: HomePage2,
+            component: getRouterView(),
             children: [
               {
                 path: "page3",
