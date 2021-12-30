@@ -1,6 +1,5 @@
 <template>
-  <!-- <router-view> </router-view> -->
-  <p>asasas</p>
+  <router-view> </router-view>
 </template>
 
 <script setup lang="ts">

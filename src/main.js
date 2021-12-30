@@ -9,6 +9,8 @@ import Antd from 'ant-design-vue';
 import TDesign from 'tdesign-vue-next';
 import '@purge-icons/generated'
 
+import { MessagePlugin } from 'tdesign-vue-next';
+
 import Keycloak from 'keycloak-js'
 // 引入组件库全局样式资源
 import 'tdesign-vue-next/es/style/index.css';
@@ -59,4 +61,5 @@ keycloak.init({ onLoad: initOptions.onLoad }).then((auth) => {
 
 }).catch((error) => {
     console.error("🚀 ~ file: main.js ~ line 52 ~ keycloak.init ~ Authenticated Failed", error)
+    MessagePlugin.error({ content: '身份认证失败', duration: 0 });
 });

@@ -16,7 +16,7 @@ export const routes: RouteRecordRaw[] = [
       hideMenu: true,
     },
     component: () => null,
-    redirect: "/home/page1",
+    redirect: "/home",
   },
   {
     path: "/home",
@@ -26,6 +26,7 @@ export const routes: RouteRecordRaw[] = [
       icon: "ant-design:home-outlined",
       // hideMenu: true,
     },
+    redirect: "/home/page1",
     component: Layout,
     children: [
       {
@@ -35,6 +36,7 @@ export const routes: RouteRecordRaw[] = [
           title: "页面1",
           icon: "ant-design:idcard-outlined",
         },
+        redirect: "/home/page1/page2",
         component: getRouterView(),
         children: [
           {
@@ -45,6 +47,7 @@ export const routes: RouteRecordRaw[] = [
               icon: "ant-design:hourglass-filled",
               // hideMenu: true,
             },
+            redirect: "/home/page1/page2/page3",
             component: getRouterView(),
             children: [
               {
@@ -71,6 +74,7 @@ export const routes: RouteRecordRaw[] = [
       hideMenu: true,
     },
     component: Layout,
+    redirect: "/page1/index",
     children: [
       {
         path: "index",
@@ -92,6 +96,7 @@ export const routes: RouteRecordRaw[] = [
       hideMenu: true,
     },
     component: Layout,
+    redirect: "/page2/index",
     children: [
       {
         path: "index",
@@ -113,6 +118,7 @@ export const routes: RouteRecordRaw[] = [
       hideMenu: true,
     },
     component: Layout,
+    redirect: "/page3/index",
     children: [
       {
         path: "index",

@@ -1,6 +1,7 @@
 import { message } from "ant-design-vue";
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import { ApiMessageModel } from "../services/model/httpModel";
+import { MessagePlugin } from "tdesign-vue-next";
 
 const instance = axios.create();
 
@@ -37,6 +38,7 @@ instance.interceptors.response.use(
     return response;
   },
   function (error) {
+    MessagePlugin.warning("系统异常");
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error
     return Promise.reject(error);
