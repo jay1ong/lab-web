@@ -9,21 +9,13 @@ import Antd from 'ant-design-vue';
 import TDesign from 'tdesign-vue-next';
 import '@purge-icons/generated'
 
-import Keycloak from 'keycloak-js'
 // 引入组件库全局样式资源
 import 'tdesign-vue-next/es/style/index.css';
 
 if (import.meta.env.DEV) {
     import('ant-design-vue/dist/antd.less');
 }
-
-let initOptions = {
-    url: '/auth', realm: 'lab', clientId: 'lab-auth-web', onLoad: 'login-required'
-}
-
-let keycloak = Keycloak(initOptions);
-
-const app = createApp(App, { keycloak: keycloak });
+const app = createApp(App);
 
 app.config.productionTip = false;
 
